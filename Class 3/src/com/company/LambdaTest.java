@@ -7,12 +7,7 @@ import java.util.stream.Collectors;
 
 public class LambdaTest {
     public static void main(String[] args) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Before java 8");
-            }
-        }).start();
+
         //Lambda Expression
         new Thread(() -> System.out.println("After Java8")).start();
 
@@ -59,5 +54,7 @@ public class LambdaTest {
 //                .max((priceA,priceB) -> priceA - priceB);
                 //.collect(Collectors.toSet());
         System.out.println(processedPrice.get());
+
+
     }
 }
